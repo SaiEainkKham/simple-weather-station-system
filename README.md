@@ -10,7 +10,6 @@ A multi-layered system that collects sensor data from Arduino, stores raw sensor
 4. [Setup & Installation](#setup--installation)
 5. [How It Works](#how-it-works)
 6. [Running the Project](#running-the-project)
-7. [Project Structure](#project-structure)
 
 ---
 
@@ -113,24 +112,3 @@ This project demonstrates a full data pipeline:
 
    * Open your browser at [http://127.0.0.1:5000/]().
    * Visit `/raw` or `/stats` to see data.
-
----
-
-## Project Structure
-
-Example structure (adjust as needed):
-
-WeatherStation/
-├── Arduino/
-│   └── WeatherStation.ino       # Arduino sketch
-├── CSharpConsole/
-│   └── Program.cs               # C# code that reads serial & inserts data
-├── JavaAggregation/
-│   └── WeatherLog.java          # Java code for daily min/max/avg calculations
-├── PythonWeb/
-│   ├── app.py                   # Flask server
-│   ├── requirements.txt         # Python dependencies
-│   └── templates/
-│       ├── raw_data.html
-│       └── stats_data.html
-└── README.md
