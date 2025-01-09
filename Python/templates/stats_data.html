@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aggregated Sensor Data</title>
+</head>
+<body>
+    <h1>Recent Daily Stats</h1>
+    <table border="1">
+        <tr>
+            <th>Date</th>
+            <th>MinTemp0</th>
+            <th>MaxTemp0</th>
+            <th>AvgTemp0</th>
+            <th>MinHumidity</th>
+            <th>MaxHumidity</th>
+            <th>AvgHumidity</th>
+            <th>MinTemp1</th>
+            <th>MaxTemp1</th>
+            <th>AvgTemp1</th>
+            <th>MinPressure</th>
+            <th>MaxPressure</th>
+            <th>AvgPressure</th>
+        </tr>
+        {% for stat in stats %}
+        <tr>
+            <td>{{ stat[0] }}</td>
+            <td>{{ stat[1] }}</td>
+            <td>{{ stat[2] }}</td>
+            <td>{{ stat[3] }}</td>
+            <td>{{ stat[4] }}</td>
+            <td>{{ stat[5] }}</td>
+            <td>{{ stat[6] }}</td>
+            <td>{{ stat[7] }}</td>
+            <td>{{ stat[8] }}</td>
+            <td>{{ stat[9] }}</td>
+            <td>{{ stat[10] }}</td>
+            <td>{{ stat[11] }}</td>
+            <td>{{ stat[12] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <p><a href="/">Back to Home</a></p>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Raw Sensor Data</title>
+</head>
+<body>
+    <h1>Latest Raw Sensor Data</h1>
+    <table border="1">
+        <tr>
+            <th>Temperature0</th>
+            <th>Humidity</th>
+            <th>Timestamp</th>
+        </tr>
+        {% for row in rows %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <p><a href="/">Back to Home</a></p>
+</body>
+</html>
