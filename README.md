@@ -5,11 +5,12 @@ A multi-layered system that collects sensor data from Arduino, stores raw sensor
 ## Table of Contents
 
 1. [Overview](#overview)
-2. [System Architecture](#system-architecture)
-3. [Technologies Used](#technologies-used)
-4. [Setup & Installation](#setup--installation)
-5. [How It Works](#how-it-works)
-6. [Running the Project](#running-the-project)
+2. [Required Hardware](#required-hardware)
+3. [System Architecture](#system-architecture)
+4. [Technologies Used](#technologies-used)
+5. [Setup & Installation](#setup--installation)
+6. [How It Works](#how-it-works)
+7. [Running the Project](#running-the-project)
 
 ---
 
@@ -21,6 +22,19 @@ This project demonstrates a full data pipeline:
 2. **Store** raw sensor readings in `SensorDataDB` using a C# console app.
 3. **Process** daily min, max, and average values using a Java program, which writes aggregated data into `sensorDataCalculated` (a second database).
 4. **Visualize** both raw and aggregated data via a **Flask** web server written in Python.
+
+---
+
+## Required Hardware
+
+This project contains a list of hardware and sensors
+
+1. [Arduino Uno](https://store.arduino.cc/products/arduino-uno-rev3) and [Base Shield](https://wiki.seeedstudio.com/Base_Shield_V2/)
+2. [Grove Temperature & Humidity Sensor (DHT11)](https://wiki.seeedstudio.com/Grove-TemperatureAndHumidity_Sensor/)
+3. [Grove - Barometer (High-Accuracy)](https://wiki.seeedstudio.com/Grove-Barometer-High-Accuracy/)
+
+- Temperature&Humidity Sensor is connected to D2 and Barometer is connected to I2C of Arduino Base Shield.
+
 
 ---
 
